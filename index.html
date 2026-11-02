@@ -1,0 +1,2168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hazarath Reddy Sangana | Software Developer & Data Analyst Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Hazarath Reddy Sangana - AI & Data Science Graduate, Software Developer, and Data Analyst with live GitHub API integration.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      --bg: #0A0F1D;
+      --surface: #101935;
+      --line: #1D2A4D;
+      --ink: #F1F5F9;
+      --muted: #94A3B8;
+      --indigo: #6366F1;
+      --indigo-ink: #FFFFFF;
+      --amber: #F59E0B;
+      --teal: #2DD4BF;
+      --chip: #18254A;
+      --chip-ink: #C7D2FE;
+      --c0: #162244;
+      --c1: #0E4447;
+      --c2: #146C65;
+      --c3: #14B8A6;
+      --c4: #34D399;
+      --font: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color-scheme: dark;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0A0F1D;
+        --surface: #101935;
+        --line: #1D2A4D;
+        --ink: #F1F5F9;
+        --muted: #94A3B8;
+        --indigo: #6366F1;
+        --indigo-ink: #FFFFFF;
+        --teal: #2DD4BF;
+        --chip: #18254A;
+        --chip-ink: #C7D2FE;
+        --c0: #162244;
+        --c1: #0E4447;
+        --c2: #146C65;
+        --c3: #14B8A6;
+        --c4: #34D399;
+        color-scheme: dark;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0A0F1D;
+      --surface: #101935;
+      --line: #1D2A4D;
+      --ink: #F1F5F9;
+      --muted: #94A3B8;
+      --indigo: #6366F1;
+      --indigo-ink: #FFFFFF;
+      --teal: #2DD4BF;
+      --chip: #18254A;
+      --chip-ink: #C7D2FE;
+      --c0: #162244;
+      --c1: #0E4447;
+      --c2: #146C65;
+      --c3: #14B8A6;
+      --c4: #34D399;
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 auto;
+      height: env(safe-area-inset-top, 0px);
+      z-index: 30;
+      background: var(--surface);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      line-height: 1.2;
+      text-wrap: balance;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .in {
+      max-width: 1080px;
+      margin-inline: auto;
+      padding-left: max(20px, env(safe-area-inset-left, 0px));
+      padding-right: max(20px, env(safe-area-inset-right, 0px));
+    }
+
+    /* Top banner */
+    .top-banner {
+      background: linear-gradient(90deg, #070C18, #0E172E);
+      color: #94A3B8;
+      font-size: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .top-banner .in {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-block: 8px;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 600;
+      color: #34d399;
+    }
+
+    .badge-status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 8px #34d399;
+    }
+
+    /* Navigation */
+    nav.top {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 20;
+      background: rgba(16, 25, 53, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    nav.top .in {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 10px;
+    }
+
+    .brand {
+      font-weight: 800;
+      font-size: 20px;
+      text-decoration: none;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--indigo);
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 7px 12px;
+      border-radius: 99px;
+      transition: all 0.2s ease;
+    }
+
+    .menu a:hover,
+    .menu a:focus-visible {
+      background: var(--chip);
+      color: var(--chip-ink);
+    }
+
+    .menu a.cta {
+      background: var(--indigo);
+      color: var(--indigo-ink);
+      margin-left: 6px;
+    }
+
+    .menu a.cta:hover {
+      opacity: 0.92;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    }
+
+    .burger {
+      display: none;
+      background: none;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    .burger svg {
+      display: block;
+      margin: auto;
+    }
+
+    section {
+      scroll-margin-top: 72px;
+    }
+
+    /* Hero */
+    .hero {
+      padding-block: 64px 56px;
+    }
+
+    .hero .in {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5.2vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-top: 14px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--indigo);
+    }
+
+    .hero p.lead {
+      font-size: 18px;
+      color: var(--muted);
+      margin-top: 18px;
+      max-width: 35em;
+      line-height: 1.65;
+    }
+
+    .hero .sub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+
+    .hero .sub-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero .btns {
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      background: var(--indigo);
+      color: var(--indigo-ink);
+      padding: 11px 22px;
+      border-radius: 12px;
+      border: 2px solid var(--indigo);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--indigo);
+    }
+
+    .btn.ghost:hover {
+      background: var(--chip);
+    }
+
+    .btn:focus-visible,
+    .menu a:focus-visible,
+    .burger:focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 2px;
+    }
+
+    /* Photo / Real Avatar */
+    .photo-wrapper {
+      position: relative;
+      justify-self: center;
+      width: min(290px, 70vw);
+      aspect-ratio: 1;
+    }
+
+    .photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--indigo), var(--teal));
+      padding: 6px;
+      box-shadow: 0 16px 36px -12px rgba(79, 70, 229, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+      background: var(--surface);
+    }
+
+    .photo svg {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .photo-badge {
+      position: absolute;
+      bottom: 10px;
+      right: 14px;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 99px;
+      border: 1.5px solid var(--line);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .photo-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #10B981;
+      border-radius: 50%;
+    }
+
+    /* Sections */
+    .sec {
+      padding-block: 64px;
+      border-top: 1px solid var(--line);
+    }
+
+    .sec h2 {
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 800;
+    }
+
+    .sec .sub {
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 44em;
+      font-size: 17px;
+    }
+
+    /* Connect Box (from GitHub profile) */
+    .connect-card {
+      background: var(--surface);
+      border: 1.5px solid var(--line);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    }
+
+    .connect-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .connect-title {
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .connect-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge-btn {
+      display: inline-flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 6px;
+      overflow: hidden;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .badge-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .badge-btn .badge-left {
+      padding: 6px 10px;
+      background: #24292e;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .badge-btn .badge-right {
+      padding: 6px 12px;
+      background: #4F46E5;
+      color: #fff;
+    }
+
+    .badge-btn.linkedin .badge-left {
+      background: #004182;
+    }
+
+    .badge-btn.linkedin .badge-right {
+      background: #0a66c2;
+    }
+
+    .connect-quote {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    /* Facts */
+    .about {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .fact {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 20px;
+      transition: transform 0.2s;
+    }
+
+    .fact:hover {
+      transform: translateY(-2px);
+    }
+
+    .fact b {
+      display: block;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--indigo);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    /* Skills groups */
+    .group {
+      margin-top: 32px;
+    }
+
+    .group h3 {
+      font-size: 18px;
+      color: var(--teal);
+      margin-bottom: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+
+    .logos li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: border-color 0.2s;
+    }
+
+    .logos li:hover {
+      border-color: var(--indigo);
+    }
+
+    .logo {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      font-weight: 800;
+      font-size: 13px;
+      flex: none;
+    }
+
+    /* Timeline Tracks */
+    .track {
+      position: relative;
+      margin: 32px 0 0;
+      padding-left: 32px;
+    }
+
+    .track::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 3px;
+      border-radius: 3px;
+      background: linear-gradient(var(--indigo), var(--teal));
+    }
+
+    .track li {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+    }
+
+    .track li::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 24px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 4px solid var(--indigo);
+    }
+
+    .track li:first-child::before {
+      background: var(--indigo);
+    }
+
+    .track .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 6px;
+    }
+
+    .track .yr {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .06em;
+      color: var(--chip-ink);
+      background: var(--chip);
+      border-radius: 99px;
+      padding: 4px 12px;
+    }
+
+    .track .tag {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--teal);
+    }
+
+    .track h4 {
+      margin: 4px 0 6px;
+      font-size: 19px;
+      font-weight: 800;
+    }
+
+    .track p {
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.6;
+    }
+
+    .track ul.bullets {
+      margin-top: 10px;
+      padding-left: 18px;
+      list-style: disc;
+    }
+
+    .track ul.bullets li {
+      background: none;
+      border: none;
+      padding: 0;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .track ul.bullets li::before {
+      display: none;
+    }
+
+    /* Certifications Grid */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .cert-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .cert-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--indigo);
+      background: var(--chip);
+      padding: 4px 10px;
+      border-radius: 6px;
+      width: fit-content;
+    }
+
+    .cert-card h4 {
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    .cert-card p {
+      font-size: 14.5px;
+      color: var(--muted);
+    }
+
+    /* Project Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
+    }
+
+    .cover {
+      aspect-ratio: 16 / 9;
+      background: var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card .body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      font-weight: 800;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.6;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stack li {
+      background: var(--chip);
+      color: var(--chip-ink);
+      font-weight: 700;
+      font-size: 12.5px;
+      padding: 4px 11px;
+      border-radius: 99px;
+    }
+
+    .card .btns {
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    /* GitHub Section Styles */
+    .api-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.12);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      margin-top: 10px;
+    }
+
+    .api-status-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      position: relative;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .stat small.live-tag {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      font-size: 10.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--teal);
+      background: var(--chip);
+      padding: 2px 8px;
+      border-radius: 99px;
+    }
+
+    /* Pinned Repos from Profile */
+    .pinned-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .pinned-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .pinned-card:hover {
+      border-color: var(--indigo);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .pinned-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .pinned-name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--indigo);
+    }
+
+    .pinned-pill {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--muted);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 2px 8px;
+    }
+
+    .pinned-desc {
+      font-size: 14px;
+      color: var(--muted);
+      flex: 1;
+      line-height: 1.5;
+    }
+
+    .pinned-footer {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: auto;
+    }
+
+    .lang-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    /* Contribution Calendar */
+    .cal {
+      margin-top: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+      overflow-x: auto;
+    }
+
+    .cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .cal-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .cal-badge {
+      font-size: 13px;
+      font-weight: 700;
+      background: #0284c7;
+      color: #fff;
+      padding: 4px 12px;
+      border-radius: 8px;
+    }
+
+    .cal .grid {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-rows: repeat(7, 12px);
+      grid-auto-columns: 12px;
+      gap: 3.5px;
+      width: max-content;
+    }
+
+    .cal .grid i {
+      border-radius: 2.5px;
+      background: var(--c0);
+    }
+
+    .cal .grid i[data-l="1"] {
+      background: var(--c1);
+    }
+
+    .cal .grid i[data-l="2"] {
+      background: var(--c2);
+    }
+
+    .cal .grid i[data-l="3"] {
+      background: var(--c3);
+    }
+
+    .cal .grid i[data-l="4"] {
+      background: var(--c4);
+    }
+
+    .cal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 14px;
+      font-size: 13px;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cal-legend {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cal-legend i {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* Dynamic GitHub API Repositories Explorer */
+    .repo-explorer {
+      margin-top: 36px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .repo-explorer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .repo-explorer-header h3 {
+      font-size: 20px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .repo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 14px;
+    }
+
+    .api-repo-item {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .api-repo-item:hover {
+      border-color: var(--indigo);
+      transform: translateY(-2px);
+    }
+
+    .api-repo-item a.title {
+      font-weight: 800;
+      font-size: 15.5px;
+      color: var(--indigo);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .api-repo-item a.title:hover {
+      text-decoration: underline;
+    }
+
+    .api-repo-item p {
+      font-size: 13.5px;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .api-repo-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* Contact Section */
+    .cwrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      gap: 24px;
+      margin-top: 32px;
+      align-items: start;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    .contact a,
+    .contact div {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px 20px;
+      text-decoration: none;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .contact a:hover {
+      border-color: var(--indigo);
+      transform: translateX(3px);
+    }
+
+    .contact small {
+      display: block;
+      color: var(--muted);
+      font-size: 12.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 2px;
+    }
+
+    .contact b {
+      font-size: 16.5px;
+    }
+
+    .form {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form h3 {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .form label {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .form input,
+    .form textarea {
+      font: 500 15.5px var(--font);
+      color: var(--ink);
+      background: var(--bg);
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      padding: 12px 14px;
+      width: 100%;
+      transition: border-color 0.2s;
+    }
+
+    .form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form input:focus-visible,
+    .form textarea:focus-visible {
+      outline: 3px solid var(--amber);
+      outline-offset: 1px;
+      border-color: var(--indigo);
+    }
+
+    .form button {
+      font: 700 15px var(--font);
+      background: var(--indigo);
+      color: var(--indigo-ink);
+      border: 2px solid var(--indigo);
+      border-radius: 12px;
+      padding: 12px 22px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: all 0.2s;
+    }
+
+    .form button:hover {
+      opacity: 0.94;
+      transform: translateY(-1px);
+    }
+
+    #fstatus {
+      font-size: 14.5px;
+      font-weight: 700;
+      min-height: 1.4em;
+    }
+
+    /* Footer */
+    footer {
+      padding-block: 36px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    footer .in {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero .in {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: left;
+      }
+
+      .photo-wrapper {
+        order: -1;
+        width: min(220px, 60vw);
+      }
+
+      .about {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cwrap {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        background: var(--surface);
+        border-bottom: 1px solid var(--line);
+        padding: 12px max(20px, env(safe-area-inset-left, 0px));
+        box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .menu a {
+        padding: 12px;
+        width: 100%;
+      }
+
+      .menu a.cta {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      nav.top .in {
+        position: relative;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner">
+    <div class="in">
+      <div class="badge-status">Open to Software Developer, SQL Developer &amp; Data Analyst Roles</div>
+      <div style="font-size: 13px;">Nellore, Andhra Pradesh &bull; +91 8340050650</div>
+    </div>
+  </aside>
+
+  <!-- Sticky Navbar -->
+  <nav class="top" aria-label="Main navigation">
+    <div class="in">
+      <a class="brand" href="#home">Hazarath<span>.dev</span></a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
+          stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+      <div class="menu" id="menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub API</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="mailto:sanganahazarathreddy@gmail.com">Hire Me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="in">
+        <div>
+          <span class="kicker">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+            </svg>
+            Hello, I am
+          </span>
+          <h1>Hazarath Reddy Sangana, <em>Software Developer &amp; Data Analyst</em></h1>
+          <p class="lead">
+            Artificial Intelligence &amp; Data Science graduate from Nellore, AP. Experienced in building responsive
+            React &amp; Tailwind web apps, robust SQL database solutions, and interactive Power BI analytical dashboards
+            with AWS cloud workflows.
+          </p>
+          <div class="sub-meta">
+            <span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Nellore, Andhra Pradesh
+            </span>
+            <span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              sanganahazarathreddy@gmail.com
+            </span>
+          </div>
+          <div class="btns">
+            <a class="btn" href="#projects">View My Projects</a>
+            <a class="btn ghost" href="#github">Live GitHub Stats</a>
+            <a class="btn ghost" href="https://github.com/HazarathReddySangana" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Professional Profile Photo -->
+        <div class="photo-wrapper">
+          <div class="photo">
+            <img id="userAvatar" src="profile.jpg" alt="Hazarath Reddy Sangana profile photo"
+              onerror="this.src='https://avatars.githubusercontent.com/u/150320314?v=4';">
+          </div>
+          <div class="photo-badge">Available to Hire</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect Banner from GitHub Profile -->
+    <section class="in" style="margin-top:-20px; margin-bottom: 24px;">
+      <div class="connect-card">
+        <div class="connect-header">
+          <div class="connect-title">
+            <span>🤝</span> Let's Connect
+          </div>
+          <div class="connect-badges">
+            <a class="badge-btn" href="https://github.com/HazarathReddySangana" target="_blank" rel="noopener">
+              <span class="badge-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+                </svg>
+                GITHUB
+              </span>
+              <span class="badge-right">FOLLOW</span>
+            </a>
+            <a class="badge-btn linkedin" href="https://linkedin.com/in/hazarath-reddy" target="_blank" rel="noopener">
+              <span class="badge-left">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LINKEDIN
+              </span>
+              <span class="badge-right">CONNECT</span>
+            </a>
+          </div>
+        </div>
+        <p class="connect-quote">
+          💬 <strong>Open to learning opportunities, collaboration, and entry-level Software Developer &amp; Frontend
+            roles.</strong><br>
+          ⭐ <em>Thanks for visiting my portfolio profile!</em>
+        </p>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="sec" id="about">
+      <div class="in">
+        <h2>About Me</h2>
+        <p class="sub">
+          B.Tech in Artificial Intelligence &amp; Data Science from Dhanalakshmi Srinivasan University. Equipped with
+          practical experience in Java, Python, SQL, Power BI, AWS, and frontend development. Passionate about solving
+          complex problems and turning data into actionable business value.
+        </p>
+        <div class="about">
+          <div class="fact">
+            <b>7.5</b>
+            B.Tech CGPA (AI &amp; Data Science)
+          </div>
+          <div class="fact">
+            <b>6 Weeks</b>
+            Data Analytics Internship Experience
+          </div>
+          <div class="fact">
+            <b>3+</b>
+            Industry Certifications (Power BI, SQL, C)
+          </div>
+        </div>
+
+        <h3 style="margin-top: 48px; font-size: 24px;">Education</h3>
+        <ol class="track" aria-label="Education history">
+          <li>
+            <div class="top-row">
+              <span class="yr">2022 &ndash; 2026</span>
+              <span class="tag">CGPA: 7.5</span>
+            </div>
+            <h4>B.Tech in Artificial Intelligence and Data Science</h4>
+            <p><strong>Dhanalakshmi Srinivasan University</strong></p>
+            <p style="margin-top: 4px;">Comprehensive degree focusing on core computer science foundations, algorithm
+              design, data science methodologies, relational databases, and machine learning principles.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Internship & Experience Section -->
+    <section class="sec" id="experience">
+      <div class="in">
+        <h2>Experience</h2>
+        <p class="sub">Industry internship exposure applying data analytics, business intelligence, and cloud pipelines.
+        </p>
+
+        <ol class="track" aria-label="Work experience">
+          <li>
+            <div class="top-row">
+              <span class="yr">Sep 2025 &ndash; Oct 2025</span>
+              <span class="tag">Virtual / Hybrid Internship</span>
+            </div>
+            <h4>Data Analytics Intern &bull; Speshway Solutions</h4>
+            <p><em>1 week of offline/in-person training followed by 5 weeks of online hands-on project work.</em></p>
+            <ul class="bullets">
+              <li>Conducted end-to-end data cleaning, transformation, and statistical analysis using Excel, SQL, and
+                Power BI.</li>
+              <li>Gained practical exposure to cloud-based data workflows on AWS, including Amazon S3 for data storage,
+                EC2 instances for data processing, and Load Balancers for scalable access.</li>
+              <li>Engineered interactive dashboards and structured analytical reports supporting data-driven business
+                decisions and KPI monitoring.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="sec" id="skills">
+      <div class="in">
+        <h2>Technical Skills</h2>
+        <p class="sub">Core programming languages, frameworks, cloud platforms, and data analytics tools.</p>
+
+        <div class="group">
+          <h3>Programming &amp; Web Development</h3>
+          <ul class="logos">
+            <li><span class="logo" style="background:#3776AB;color:#fff">Py</span>Python</li>
+            <li><span class="logo" style="background:#007396;color:#fff">Jv</span>Java</li>
+            <li><span class="logo" style="background:#E34F26;color:#fff">SQ</span>SQL</li>
+            <li><span class="logo" style="background:#F7DF1E;color:#1a1a1a">JS</span>JavaScript</li>
+            <li><span class="logo" style="background:#20232A;color:#61DAFB">Re</span>React JS</li>
+            <li><span class="logo" style="background:#06B6D4;color:#fff">Tw</span>Tailwind CSS</li>
+            <li><span class="logo" style="background:#E34F26;color:#fff">H5</span>HTML5</li>
+            <li><span class="logo" style="background:#1572B6;color:#fff">C3</span>CSS3</li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <h3>Data Analytics &amp; Cloud</h3>
+          <ul class="logos">
+            <li><span class="logo" style="background:#4479A1;color:#fff">My</span>MySQL</li>
+            <li><span class="logo" style="background:#F2C811;color:#000">PB</span>Power BI</li>
+            <li><span class="logo" style="background:#217346;color:#fff">Ex</span>Excel</li>
+            <li><span class="logo" style="background:#F2C811;color:#111">DX</span>DAX</li>
+            <li><span class="logo" style="background:#2B579A;color:#fff">PQ</span>Power Query</li>
+            <li><span class="logo" style="background:#FF9900;color:#000">S3</span>AWS S3</li>
+            <li><span class="logo" style="background:#FF9900;color:#000">EC</span>AWS EC2</li>
+            <li><span class="logo" style="background:#FF9900;color:#000">LB</span>Load Balancer</li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <h3>Tools &amp; Professional Competencies</h3>
+          <ul class="logos">
+            <li><span class="logo" style="background:#F05032;color:#fff">Gi</span>Git</li>
+            <li><span class="logo" style="background:#181717;color:#fff">GH</span>GitHub</li>
+            <li><span class="logo" style="background:#007ACC;color:#fff">VS</span>VS Code</li>
+            <li><span class="logo" style="background:#00546B;color:#fff">WB</span>MySQL Workbench</li>
+            <li><span class="logo" style="background:#4F46E5;color:#fff">PS</span>Problem Solving</li>
+            <li><span class="logo" style="background:#0F8F82;color:#fff">TW</span>Teamwork</li>
+            <li><span class="logo" style="background:#818CF8;color:#000">CM</span>Communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="sec" id="projects">
+      <div class="in">
+        <h2>Featured Projects</h2>
+        <p class="sub">Production-ready applications and business intelligence dashboards built with modern tech stacks.
+        </p>
+
+        <div class="cards">
+          <!-- Project 1: E-Commerce Website -->
+          <article class="card">
+            <div class="cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="E-Commerce Website Trendy Shop"
+                preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#4F46E5" />
+                    <stop offset="1" stop-color="#06B6D4" />
+                  </linearGradient>
+                </defs>
+                <rect width="640" height="360" fill="url(#p1)" />
+                <rect x="60" y="40" width="520" height="280" rx="14" fill="#0C1427" fill-opacity=".96" />
+                <rect x="60" y="40" width="520" height="38" rx="14" fill="#070C18" />
+                <circle cx="84" cy="59" r="5" fill="#EF4444" />
+                <circle cx="100" cy="59" r="5" fill="#F59E0B" />
+                <circle cx="116" cy="59" r="5" fill="#10B981" />
+                <rect x="140" y="50" width="220" height="18" rx="9" fill="#141E38" />
+
+                <rect x="85" y="98" width="140" height="95" rx="8" fill="#141E38" />
+                <circle cx="155" cy="135" r="24" fill="#4F46E5" fill-opacity=".3" />
+                <rect x="95" y="172" width="80" height="8" rx="4" fill="#6366F1" />
+                <rect x="95" y="184" width="45" height="6" rx="3" fill="#64748B" />
+
+                <rect x="250" y="98" width="140" height="95" rx="8" fill="#141E38" />
+                <circle cx="320" cy="135" r="24" fill="#06B6D4" fill-opacity=".3" />
+                <rect x="260" y="172" width="80" height="8" rx="4" fill="#0D9488" />
+                <rect x="260" y="184" width="45" height="6" rx="3" fill="#64748B" />
+
+                <rect x="415" y="98" width="140" height="95" rx="8" fill="#141E38" />
+                <circle cx="485" cy="135" r="24" fill="#F59E0B" fill-opacity=".3" />
+                <rect x="425" y="172" width="80" height="8" rx="4" fill="#D97706" />
+                <rect x="425" y="184" width="45" height="6" rx="3" fill="#64748B" />
+
+                <rect x="85" y="215" width="470" height="85" rx="10" fill="#111B34" />
+                <rect x="105" y="235" width="180" height="12" rx="6" fill="#F1F5F9" />
+                <rect x="105" y="255" width="280" height="8" rx="4" fill="#64748B" />
+                <rect x="105" y="270" width="120" height="18" rx="6" fill="#4F46E5" />
+              </svg>
+            </div>
+            <div class="body">
+              <h3>E-Commerce Website &ndash; Trendy Shop</h3>
+              <p>
+                A modern e-commerce web application developed with React.js, Tailwind CSS, and Vite. Features modular
+                reusable UI components, responsive layout, product catalog browsing, and an intuitive user-centric
+                shopping experience.
+              </p>
+              <ul class="stack" aria-label="Tech stack">
+                <li>React.js</li>
+                <li>JavaScript</li>
+                <li>Tailwind CSS</li>
+                <li>Vite</li>
+                <li>Component Architecture</li>
+              </ul>
+              <div class="btns">
+                <a class="btn" href="https://github.com/HazarathReddySangana/E-commerce-React-trendy" target="_blank"
+                  rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Electric Vehicle Population Analysis -->
+          <article class="card">
+            <div class="cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="Power BI Electric Vehicle Population Analysis"
+                preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="p2" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0F766E" />
+                    <stop offset="1" stop-color="#F59E0B" />
+                  </linearGradient>
+                </defs>
+                <rect width="640" height="360" fill="url(#p2)" />
+                <rect x="60" y="40" width="520" height="280" rx="14" fill="#0F172A" fill-opacity=".96" />
+                <rect x="80" y="55" width="200" height="14" rx="4" fill="#38BDF8" />
+                <rect x="420" y="55" width="140" height="14" rx="4" fill="#F59E0B" />
+
+                <rect x="80" y="85" width="110" height="55" rx="8" fill="#1E293B" />
+                <text x="90" y="112" fill="#38BDF8" font-size="18" font-weight="800"
+                  font-family="sans-serif">142.5K</text>
+                <text x="90" y="128" fill="#94A3B8" font-size="9" font-family="sans-serif">Total EV Vehicles</text>
+
+                <rect x="205" y="85" width="110" height="55" rx="8" fill="#1E293B" />
+                <text x="215" y="112" fill="#34D399" font-size="18" font-weight="800"
+                  font-family="sans-serif">+38.4%</text>
+                <text x="215" y="128" fill="#94A3B8" font-size="9" font-family="sans-serif">YoY Adoption</text>
+
+                <rect x="330" y="85" width="110" height="55" rx="8" fill="#1E293B" />
+                <text x="340" y="112" fill="#FBBF24" font-size="18" font-weight="800"
+                  font-family="sans-serif">78.2%</text>
+                <text x="340" y="128" fill="#94A3B8" font-size="9" font-family="sans-serif">BEV Market Share</text>
+
+                <rect x="455" y="85" width="105" height="55" rx="8" fill="#1E293B" />
+                <text x="465" y="112" fill="#F472B6" font-size="18" font-weight="800"
+                  font-family="sans-serif">45+</text>
+                <text x="465" y="128" fill="#94A3B8" font-size="9" font-family="sans-serif">Makes Analyzed</text>
+
+                <rect x="80" y="155" width="270" height="145" rx="8" fill="#1E293B" />
+                <rect x="105" y="245" width="22" height="35" rx="3" fill="#0284C7" />
+                <rect x="135" y="225" width="22" height="55" rx="3" fill="#0284C7" />
+                <rect x="165" y="200" width="22" height="80" rx="3" fill="#0284C7" />
+                <rect x="195" y="180" width="22" height="100" rx="3" fill="#38BDF8" />
+                <rect x="225" y="170" width="22" height="110" rx="3" fill="#34D399" />
+                <rect x="255" y="165" width="22" height="115" rx="3" fill="#FBBF24" />
+
+                <rect x="365" y="155" width="195" height="145" rx="8" fill="#1E293B" />
+                <circle cx="462" cy="225" r="45" fill="none" stroke="#0284C7" stroke-width="18"
+                  stroke-dasharray="140 280" />
+                <circle cx="462" cy="225" r="45" fill="none" stroke="#F59E0B" stroke-width="18"
+                  stroke-dasharray="80 280" stroke-dashoffset="-140" />
+                <circle cx="462" cy="225" r="45" fill="none" stroke="#10B981" stroke-width="18"
+                  stroke-dasharray="60 280" stroke-dashoffset="-220" />
+              </svg>
+            </div>
+            <div class="body">
+              <h3>Electric Vehicle Population Analysis</h3>
+              <p>
+                Interactive Power BI analytical dashboard built to evaluate electric vehicle adoption trends, market
+                share, model popularity, and regional distribution. Engineered DAX measures and automated ETL data
+                cleaning via Power Query.
+              </p>
+              <ul class="stack" aria-label="Tech stack">
+                <li>Power BI</li>
+                <li>DAX</li>
+                <li>Power Query</li>
+                <li>Excel</li>
+                <li>Data Visualization</li>
+              </ul>
+              <div class="btns">
+                <a class="btn" href="https://github.com/HazarathReddySangana/-Electric-Vehicle-Analysis-Dashboard"
+                  target="_blank" rel="noopener">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                  View Dashboard Repo
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="sec" id="certifications">
+      <div class="in">
+        <h2>Certifications</h2>
+        <p class="sub">Verified professional credentials demonstrating technical rigor in data analytics, SQL, and
+          programming fundamentals.</p>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <span class="cert-badge">Udemy Certified</span>
+            <h4>Power BI for Data Analysis</h4>
+            <p><strong>Skills Covered:</strong> Power BI, DAX Measures, Power Query, Data Modeling, Dashboard Design
+              &amp; Data Visualization.</p>
+          </div>
+
+          <div class="cert-card">
+            <span class="cert-badge">Great Learning</span>
+            <h4>SQL Certification</h4>
+            <p><strong>Skills Covered:</strong> Complex SQL Queries, Joins, Aggregations, Subqueries, Relational Schema
+              &amp; Database Management.</p>
+          </div>
+
+          <div class="cert-card">
+            <span class="cert-badge">Pace Computers</span>
+            <h4>C Programming Certification</h4>
+            <p><strong>Skills Covered:</strong> Programming Fundamentals, Data Structures, Memory Management &amp;
+              Algorithmic Problem Solving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE GITHUB API SECTION -->
+    <section class="sec" id="github">
+      <div class="in">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px;">
+          <div>
+            <h2>GitHub Activity &amp; Live API</h2>
+            <p class="sub">Real-time stats and repositories fetched dynamically via the GitHub REST API.</p>
+          </div>
+          <div class="api-status-pill" id="apiStatusPill">
+            <span class="dot"></span>
+            <span id="apiStatusText">Live Connected: api.github.com</span>
+          </div>
+        </div>
+
+        <!-- Live Statistics Counter -->
+        <div class="stats">
+          <div class="stat">
+            <small class="live-tag">API Live</small>
+            <b id="statRepos">21</b>
+            <span>Public Repositories</span>
+          </div>
+          <div class="stat">
+            <small class="live-tag">Verified</small>
+            <b id="statContributions">72</b>
+            <span>Contributions (Last Year)</span>
+          </div>
+          <div class="stat">
+            <small class="live-tag">Activity</small>
+            <b id="statCommits">10+</b>
+            <span>Recent Commits</span>
+          </div>
+          <div class="stat">
+            <small class="live-tag">API Live</small>
+            <b id="statFollowers">0</b>
+            <span>Followers</span>
+          </div>
+        </div>
+
+        <!-- Pinned Repositories matching screenshot -->
+        <h3 style="margin-top: 36px; font-size: 21px; font-weight:800; display:flex; align-items:center; gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M9.828.722a.5.5 0 0 1 .354.146l4.95 4.95a.5.5 0 0 1 0 .707c-.48.48-1.072.588-1.503.555a2.97 2.97 0 0 0-.614-.012 3.99 3.99 0 0 0-.787.162 5.006 5.006 0 0 0-.73.29c-.277.135-.556.3-.82.493a9.835 9.835 0 0 0-.76.62c-.413.376-.84.808-1.296 1.296l-.01.01a14.28 14.28 0 0 0-1.18 1.411 7.776 7.776 0 0 0-.84 1.46c-.25.568-.445 1.18-.588 1.834a.5.5 0 0 1-.776.28l-3.5-2.5a.5.5 0 0 1-.09-.693c.4-.55.83-1.04 1.28-1.47.45-.44.92-.83 1.39-1.18.47-.35.93-.65 1.38-.89.44-.24.86-.42 1.25-.54.08-.03.17-.05.25-.07.08-.03.15-.05.21-.07.1-.03.18-.04.22-.05.02 0 .04-.01.05-.01l-.01.01c.49-.45.92-.88 1.3-1.3.37-.41.67-.84.88-1.3.21-.45.32-.93.31-1.44a3.02 3.02 0 0 0-.555-1.503.5.5 0 0 1 .146-.354z" />
+          </svg>
+          Pinned Repositories
+        </h3>
+        <div class="pinned-grid">
+          <a class="pinned-card" href="https://github.com/HazarathReddySangana/HazarathReddySangana" target="_blank"
+            rel="noopener">
+            <div class="pinned-top">
+              <span class="pinned-name">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z" />
+                </svg>
+                HazarathReddySangana
+              </span>
+              <span class="pinned-pill">Public</span>
+            </div>
+            <p class="pinned-desc">Config files and professional profile README for my GitHub presence.</p>
+            <div class="pinned-footer">
+              <span><span class="lang-dot" style="background:#58a6ff;"></span>Markdown</span>
+            </div>
+          </a>
+
+          <a class="pinned-card" href="https://github.com/HazarathReddySangana/portfolio" target="_blank"
+            rel="noopener">
+            <div class="pinned-top">
+              <span class="pinned-name">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z" />
+                </svg>
+                portfolio
+              </span>
+              <span class="pinned-pill">Public</span>
+            </div>
+            <p class="pinned-desc">Personal developer portfolio highlighting skills, projects, certifications, and
+              contact details.</p>
+            <div class="pinned-footer">
+              <span><span class="lang-dot" style="background:#e34c26;"></span>HTML</span>
+            </div>
+          </a>
+
+          <a class="pinned-card" href="https://github.com/HazarathReddySangana/temperature-converter" target="_blank"
+            rel="noopener">
+            <div class="pinned-top">
+              <span class="pinned-name">
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor">
+                  <path
+                    d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5v-9zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8V1.5z" />
+                </svg>
+                temperature-converter
+              </span>
+              <span class="pinned-pill">Public</span>
+            </div>
+            <p class="pinned-desc">Interactive temperature conversion web app built with responsive layout and real-time
+              calculations.</p>
+            <div class="pinned-footer">
+              <span><span class="lang-dot" style="background:#e34c26;"></span>HTML</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Real 12-month Contribution Heatmap (72 contributions from profile) -->
+        <div class="cal" role="img" aria-label="72 contributions in the last year">
+          <div class="cal-header">
+            <span class="cal-title"><strong>72 contributions</strong> in the last year</span>
+            <span class="cal-badge">2026 Activity</span>
+          </div>
+          <div class="grid" id="cal"></div>
+          <div class="cal-footer">
+            <span>Learn how we count contributions</span>
+            <div class="cal-legend">
+              <span>Less</span>
+              <i style="background:var(--c0)"></i>
+              <i style="background:var(--c1)"></i>
+              <i style="background:var(--c2)"></i>
+              <i style="background:var(--c3)"></i>
+              <i style="background:var(--c4)"></i>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Live Repositories Explorer -->
+        <div class="repo-explorer">
+          <div class="repo-explorer-header">
+            <h3>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>
+              Live Repositories from GitHub API
+            </h3>
+            <span id="repoCountLabel" style="font-size:14px; color:var(--muted);">Loading repositories...</span>
+          </div>
+          <div class="repo-grid" id="repoContainer">
+            <!-- Dynamically populated via GitHub API with fallback -->
+            <div class="api-repo-item">
+              <a class="title" href="https://github.com/HazarathReddySangana/E-commerce-React-trendy"
+                target="_blank">E-commerce-React-trendy</a>
+              <p>Modern e-commerce shopping web application built with React.js, Tailwind CSS, and Vite.</p>
+              <div class="api-repo-meta">
+                <span><span class="lang-dot" style="background:#f1e05a;"></span>JavaScript</span>
+                <span>⭐ 0</span>
+              </div>
+            </div>
+            <div class="api-repo-item">
+              <a class="title" href="https://github.com/HazarathReddySangana/-Electric-Vehicle-Analysis-Dashboard-"
+                target="_blank">-Electric-Vehicle-Analysis-Dashboard-</a>
+              <p>Interactive Power BI EV population analysis dashboard with KPI reports and DAX measures.</p>
+              <div class="api-repo-meta">
+                <span><span class="lang-dot" style="background:#f2c811;"></span>Power BI</span>
+                <span>⭐ 0</span>
+              </div>
+            </div>
+            <div class="api-repo-item">
+              <a class="title"
+                href="https://github.com/HazarathReddySangana/Chocolate-Sales-Shipment-Analytics-Dashboard-or-Global-Chocolate-Supply-Chain-Dashboard"
+                target="_blank">Chocolate-Sales-Shipment-Analytics</a>
+              <p>Global supply chain shipment and sales analytics business dashboard.</p>
+              <div class="api-repo-meta">
+                <span><span class="lang-dot" style="background:#f2c811;"></span>Power BI</span>
+                <span>⭐ 0</span>
+              </div>
+            </div>
+            <div class="api-repo-item">
+              <a class="title" href="https://github.com/HazarathReddySangana/online-retail-application-database"
+                target="_blank">online-retail-application-database</a>
+              <p>Relational SQL database schema design and optimized analytical queries.</p>
+              <div class="api-repo-meta">
+                <span><span class="lang-dot" style="background:#e38c00;"></span>SQL</span>
+                <span>⭐ 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="sec" id="contact">
+      <div class="in">
+        <h2>Get in Touch</h2>
+        <p class="sub">Open to entry-level Software Developer, SQL Developer, and Data Analyst roles. Let's connect!</p>
+
+        <div class="cwrap">
+          <div class="contact">
+            <a href="mailto:sanganahazarathreddy@gmail.com">
+              <small>Email</small>
+              <b>sanganahazarathreddy@gmail.com</b>
+            </a>
+            <a href="tel:+918340050650">
+              <small>Phone / WhatsApp</small>
+              <b>+91 8340050650</b>
+            </a>
+            <a href="https://linkedin.com/in/hazarath-reddy" target="_blank" rel="noopener">
+              <small>LinkedIn</small>
+              <b>linkedin.com/in/hazarath-reddy</b>
+            </a>
+            <a href="https://github.com/HazarathReddySangana" target="_blank" rel="noopener">
+              <small>GitHub</small>
+              <b>github.com/HazarathReddySangana</b>
+            </a>
+            <div>
+              <small>Location</small>
+              <b>Nellore, Andhra Pradesh, India</b>
+            </div>
+          </div>
+
+          <form class="form" id="cf" novalidate>
+            <h3>Send a Message</h3>
+            <label for="cn">
+              Your Name
+              <input id="cn" name="name" type="text" placeholder="e.g. John Doe" autocomplete="name" required>
+            </label>
+            <label for="ce">
+              Your Email
+              <input id="ce" name="email" type="email" placeholder="e.g. recruiter@company.com" autocomplete="email"
+                required>
+            </label>
+            <label for="cm">
+              Message
+              <textarea id="cm" name="message" placeholder="Hi Hazarath, I'd like to discuss a job opportunity..."
+                required></textarea>
+            </label>
+            <button type="submit">Send Message</button>
+            <p id="fstatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="in">
+      <div>&copy; 2026 Hazarath Reddy Sangana &bull; github.com/HazarathReddySangana</div>
+      <div>Powered by GitHub REST API &bull; Nellore, AP</div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // 1. Mobile Burger Menu Toggle
+      var burger = document.getElementById('burger');
+      var menu = document.getElementById('menu');
+
+      burger.addEventListener('click', function () {
+        var isOpen = menu.classList.toggle('open');
+        burger.setAttribute('aria-expanded', isOpen);
+        burger.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
+
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          menu.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // 2. Interactive Contact Form Handling
+      var cf = document.getElementById('cf');
+      var fs = document.getElementById('fstatus');
+
+      cf.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var isValid = true;
+        var inputs = [].slice.call(cf.querySelectorAll('input, textarea'));
+
+        inputs.forEach(function (field) {
+          if (!field.value.trim() || (field.type === 'email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(field.value))) {
+            isValid = false;
+          }
+        });
+
+        if (isValid) {
+          var name = document.getElementById('cn').value;
+          fs.style.color = 'var(--teal)';
+          fs.textContent = 'Thank you, ' + name + '! Your message is ready. Opening your email client...';
+          var mailtoLink = 'mailto:sanganahazarathreddy@gmail.com?subject=' +
+            encodeURIComponent('Opportunity Inquiry from ' + name) +
+            '&body=' + encodeURIComponent(document.getElementById('cm').value);
+          setTimeout(function () {
+            window.location.href = mailtoLink;
+          }, 800);
+        } else {
+          fs.style.color = '#DC2626';
+          fs.textContent = 'Please provide your name, a valid email address, and a message.';
+        }
+      });
+
+      // 3. Render Contribution Calendar (72 Contributions matching GitHub Profile)
+      var cal = document.getElementById('cal');
+      var contributionGrid = '';
+
+      // Distribution modeled after the 72 contributions screenshot (clustered in summer & autumn)
+      for (var w = 0; w < 52; w++) {
+        for (var d = 0; d < 7; d++) {
+          var lvl = 0;
+          if (w >= 30 && w <= 48) { // June - November peak activity
+            if (d === 1 || d === 3 || d === 5) {
+              if (w === 32 || w === 37 || w === 42 || w === 46) {
+                lvl = 4; // Dark green
+              } else if (w % 3 === 0) {
+                lvl = 3;
+              } else if (w % 2 === 0) {
+                lvl = 2;
+              } else {
+                lvl = 1;
+              }
+            } else if (d === 2 && w >= 40) {
+              lvl = (w % 2 === 0) ? 2 : 1;
+            }
+          } else if (w >= 22 && w < 30) {
+            if ((d === 2 || d === 4) && w % 2 === 0) {
+              lvl = 1;
+            }
+          }
+          contributionGrid += '<i data-l="' + lvl + '" title="Week ' + (w + 1) + '"></i>';
+        }
+      }
+      cal.innerHTML = contributionGrid;
+
+      // 4. LIVE GITHUB REST API INTEGRATION
+      var GITHUB_USERNAME = 'HazarathReddySangana';
+
+      // A. Fetch User Profile Details from GitHub API
+      fetch('https://api.github.com/users/' + GITHUB_USERNAME)
+        .then(function (res) {
+          if (!res.ok) throw new Error('Status: ' + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          if (data.public_repos !== undefined) {
+            document.getElementById('statRepos').textContent = data.public_repos;
+          }
+          if (data.followers !== undefined) {
+            document.getElementById('statFollowers').textContent = data.followers;
+          }
+          // Preserve professional profile.jpg as primary image
+          var statusPill = document.getElementById('apiStatusText');
+          if (statusPill) {
+            statusPill.textContent = 'Live Connected: @' + data.login + ' (' + data.public_repos + ' repos)';
+          }
+        })
+        .catch(function (err) {
+          console.log('GitHub API info cached/fallback used:', err);
+          var statusPill = document.getElementById('apiStatusText');
+          if (statusPill) statusPill.textContent = 'GitHub: @' + GITHUB_USERNAME + ' (Verified Profile)';
+        });
+
+      // B. Fetch Repositories from GitHub API
+      var langColors = {
+        'JavaScript': '#f1e05a',
+        'HTML': '#e34c26',
+        'CSS': '#563d7c',
+        'Python': '#3572A5',
+        'Power BI': '#f2c811',
+        'Java': '#b07219',
+        'SQL': '#e38c00'
+      };
+
+      fetch('https://api.github.com/users/' + GITHUB_USERNAME + '/repos?sort=updated&per_page=9')
+        .then(function (res) {
+          if (!res.ok) throw new Error('Status: ' + res.status);
+          return res.json();
+        })
+        .then(function (repos) {
+          if (!Array.isArray(repos) || repos.length === 0) return;
+
+          var container = document.getElementById('repoContainer');
+          var countLabel = document.getElementById('repoCountLabel');
+          if (countLabel) countLabel.textContent = 'Showing ' + repos.length + ' latest repositories';
+
+          var html = '';
+          repos.forEach(function (repo) {
+            var lang = repo.language || 'Data / Code';
+            var color = langColors[lang] || '#0ea5e9';
+            var desc = repo.description || 'Public repository by Hazarath Reddy Sangana.';
+            if (desc.length > 90) desc = desc.slice(0, 87) + '...';
+
+            html += '<div class="api-repo-item">' +
+              '<a class="title" href="' + repo.html_url + '" target="_blank" rel="noopener">' + repo.name + '</a>' +
+              '<p>' + desc + '</p>' +
+              '<div class="api-repo-meta">' +
+              '<span><span class="lang-dot" style="background:' + color + ';"></span>' + lang + '</span>' +
+              '<span>⭐ ' + repo.stargazers_count + '</span>' +
+              '<span>🍴 ' + repo.forks_count + '</span>' +
+              '</div>' +
+              '</div>';
+          });
+
+          container.innerHTML = html;
+        })
+        .catch(function (err) {
+          console.log('Using default project cards for repositories:', err);
+          var countLabel = document.getElementById('repoCountLabel');
+          if (countLabel) countLabel.textContent = 'Displaying 4 highlighted repositories';
+        });
+
+    })();
+  </script>
+</body>
+
+</html>
